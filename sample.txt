@@ -63,7 +63,7 @@ Block_Begin
 	Func_PrintVariable PB Var_lo PE;
 	Func_PrintNewLine PB PE;
 	
-	# Divide 6*2=12 #
+	# Multiply 6*2=12 #
 	Type_Integer Var_hi Op_Equ 6 Op_Multiply 2;
 	Func_PrintString PB "Mul: " PE;
 	Func_PrintVariable PB Var_hi PE;
