@@ -1,0 +1,27 @@
+5
+300
+67
+5
+5040
+28
+naciremA
+abdeflloxyz
+2 3 5 7 11 13 17 19 
+10100
+      *
+     ***
+    *****
+   *******
+  *********
+ ***********
+*************
+113.097336
+0.500000
+0.866025
+Add: 11
+Minus: 1
+Else if executed
+ok!! ok!! ok!! ok!! ok!! 
+Default Block executed
+
+Compilation Successful

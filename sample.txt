@@ -1,0 +1,109 @@
+
+*string.h*
+*math.h*
+*temp.h*
+#main function#
+Type_Integer Func_Main PB PE
+Block_Begin
+
+	#gcd and lcm#
+	Print_func PB 60 gcd 25 PE ;
+	Print_func PB 60 lcm 25 PE ;
+    
+	#max and min of two numbers#
+	Print_func Max PB 67 CMP 5 PE ;
+	Print_func Min PB 6 CMP1 5 PE;
+	
+	#factorial of any number#
+	Print_func Fact PB 7 PE ;
+	
+	#cumulative sum#
+	Print_func CUM PB 7 PE ;
+	
+	#reverse and sort a string#
+	Print_func REV PB "American" PE ;
+	Func_PrintNewLine PB PE;
+	Print_func SORT PB "abxyzdeflol" PE ;
+	Func_PrintNewLine PB PE;
+	
+	#generate prime number#
+	Print_func Prime PB 20 PE ;
+	Func_PrintNewLine PB PE;
+	
+	#convert decimal to binary#
+	Print_func Bin PB 20 PE ;
+	Func_PrintNewLine PB PE;
+	
+	#print star design#
+	Print_func STAR PB 7 PE ;
+	
+	#print area of a circle#
+	Print_func Area_circle PB 6 PE ;
+	
+	#print sin cos in degree#
+	Print_func sin PB 30 PE ;
+	Print_func cos PB 30 PE ;
+	
+    # Add 6+5=11 #
+	Type_Integer Var_a Op_Equ 6 Op_Plus 5;  
+	Func_PrintString PB "Add: " PE;
+	Func_PrintVariable PB Var_a PE;
+	Func_PrintNewLine PB PE;
+
+    # Minus 6-5=1 #
+	Type_Integer Var_lo Op_Equ 6 Op_Minus 5;
+	Func_PrintString PB "Minus: " PE;
+	Func_PrintVariable PB Var_lo PE;
+	Func_PrintNewLine PB PE;
+	
+	
+	#multiple type of assign operation#
+	Type_Integer Var_aB Op_Equ Var_a;
+	Type_Integer Var_b Op_Equ 5,Var_c Op_Equ Var_b;
+	Type_Integer Var_p Op_Equ 5, Var_q Op_Equ 7;
+
+	#if else block#
+	If PB 5 Ro_LT 4 PE
+	Block_Begin
+	Func_PrintString PB "If Executed" PE;
+	Block_End
+	
+	ElseIf PB 4 Ro_LT 5 PE
+	Block_Begin
+	Func_PrintString PB "Else if executed" PE;
+	Block_End
+	Func_PrintNewLine PB PE;
+	
+	
+	
+	#for loop#
+	Type_Integer Var_st Op_Equ 1 ;
+	Type_Integer Var_ed Op_Equ 5;
+	For PB Var_st To Var_ed IncrementBy 1 PE
+	Block_Begin
+	#ok!! will print 5 times#
+	Func_PrintString PB "ok!! " PE;
+	Block_End
+	Func_PrintNewLine PB PE;
+	
+	
+	#case declare#
+	Switch PB 2 PE
+	Block_Begin
+		1:
+			Block_Begin
+
+			Block_End
+		7:
+			Block_Begin
+
+			Block_End
+
+		*:  Block_Begin
+
+			Block_End
+	Block_End
+	
+	
+
+Block_End
