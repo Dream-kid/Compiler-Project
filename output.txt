@@ -1,5 +1,6 @@
 5
 300
+125
 67
 5
 5040
@@ -20,6 +21,8 @@ abdeflloxyz
 0.866025
 Add: 11
 Minus: 1
+Mul: 12
+div: 3
 Else if executed
 ok!! ok!! ok!! ok!! ok!! 
 Default Block executed

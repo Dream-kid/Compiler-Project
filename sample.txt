@@ -1,3 +1,7 @@
+/* 
+header file
+multiple line commnet
+*/
 
 *string.h*
 *math.h*
@@ -9,6 +13,9 @@ Block_Begin
 	#gcd and lcm#
 	Print_func PB 60 gcd 25 PE ;
 	Print_func PB 60 lcm 25 PE ;
+	
+	#power function#
+	Print_func PB 5 pow 3 PE ;
     
 	#max and min of two numbers#
 	Print_func Max PB 67 CMP 5 PE ;
@@ -56,6 +63,18 @@ Block_Begin
 	Func_PrintVariable PB Var_lo PE;
 	Func_PrintNewLine PB PE;
 	
+	# Divide 6*2=12 #
+	Type_Integer Var_hi Op_Equ 6 Op_Multiply 2;
+	Func_PrintString PB "Mul: " PE;
+	Func_PrintVariable PB Var_hi PE;
+	Func_PrintNewLine PB PE;
+	
+	
+	# Divide 6/2=3 #
+	Var_hi Op_Equ 6 Op_Divide 2;
+	Func_PrintString PB "div: " PE;
+	Func_PrintVariable PB Var_hi PE;
+	Func_PrintNewLine PB PE;
 	
 	#multiple type of assign operation#
 	Type_Integer Var_aB Op_Equ Var_a;
@@ -104,6 +123,19 @@ Block_Begin
 			Block_End
 	Block_End
 	
+	
+	
+	#Error List#
+	Type_Integer Var_h Op_Equ 6 ;
+	
+	#VAr_h declare before#
+	#Type_Integer Var_h Op_Equ 6 ;#
+	
+    #no type#
+	#Var_hss Op_Equ 6 #
+	
+	#no semiclone#
+	#Func_PrintString PB "random" PE#
 	
 
 Block_End

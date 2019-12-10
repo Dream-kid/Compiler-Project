@@ -83,7 +83,7 @@
 
 
 
-%token INT DOUBLE Bin  sin1 gcd1 lcm1 cos1 asin1 acos1 Cir_area STAR CHAR SORT Prime Print MAIN PB CMP REV FACT CUM CMP1 MINI PE BB BE SM CM ASGN PRINTVAR MAXI PRINTSTR PRINTLN PLUS MINUS MULT DIV LT GT LE GE IF ELSE ELSEIF FOR INC TO SWITCH DEFAULT COL FUNCTION
+%token INT DOUBLE Bin  sin1 gcd1 pow1 lcm1 cos1 asin1 acos1 Cir_area STAR CHAR SORT Prime Print MAIN PB CMP REV FACT CUM CMP1 MINI PE BB BE SM CM ASGN PRINTVAR MAXI PRINTSTR PRINTLN PLUS MINUS MULT DIV LT GT LE GE IF ELSE ELSEIF FOR INC TO SWITCH DEFAULT COL FUNCTION
 %nonassoc IFX
 %nonassoc ELSE
 %left SH
@@ -428,6 +428,18 @@ expression : NUM {$$ = $1;}
 					}
 					n1=a/n1;
 					printf("%d\n",n1);
+					}
+			| expression pow1 expression 
+					{
+					int n1=$1;
+					int n2=$3;
+					int ans=1;
+					while(n2)
+					{
+					ans*=n1;
+					n2--;
+					}
+					printf("%d\n",ans);
 					}
 			| expression DIV expression 
 					{

@@ -20,6 +20,7 @@ Relational_Operator "Ro_GT"|"Ro_LT"|"Ro_GE"|"Ro_LE"|"Ro_And"|"Ro_Or"|"Ro_Equ"|"R
 "*".*"*" {/*This is header file*/}
 ";" {return SM;}
 "," {return CM;}
+"/*"([^*]|\*+[^*/])*\*+"/" {/*This is multi line comment*/ }
 {digit}+ 	{
 				yylval.val = atoi(yytext);
 				return NUM;
@@ -69,6 +70,7 @@ Relational_Operator "Ro_GT"|"Ro_LT"|"Ro_GE"|"Ro_LE"|"Ro_And"|"Ro_Or"|"Ro_Equ"|"R
 "cos" {return cos1;}
 "gcd" {return gcd1;}
 "lcm" {return lcm1;}
+"pow" {return pow1;}
 
 
 "ElseIf" {return ELSEIF;}
